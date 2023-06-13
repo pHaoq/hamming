@@ -16,4 +16,16 @@ class HammingControllerTest {
         HammingController test = new HammingController();
         assertEquals(test.counter("12304560789"),9);
     }
+    @Test
+    void previouInitTest(){
+        HammingController test = new HammingController();
+        assertEquals(test.getPrevious(),"0");
+    }
+    @Test
+    void previousTest(){
+        HammingController test = new HammingController();
+        test.counter("12304560789");
+        assertEquals(test.getPrevious(),"12304560789");
+    }
+
 }
